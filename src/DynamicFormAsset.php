@@ -33,7 +33,7 @@ class DynamicFormAsset extends \yii\web\AssetBundle
         $minFiles = [];
         foreach ($files as $file) {
             $srcFiles[] = "{$file}.{$type}";
-            $minFiles[] = "{$file}.min.{$type}";
+            $minFiles[] = "{$file}.{$type}";
         }
         if (empty($this->$type)) {
             $this->$type = YII_DEBUG ? $srcFiles : $minFiles;
