@@ -457,14 +457,13 @@
             $hasDateControl.each(function () {
                 var id = $(this).attr('id');
                 var dcElementOptions = eval($(this).attr('data-krajee-datecontrol'));
-                if (id.indexOf(dcElementOptions.idSave) < 0) {
+                // if (id.indexOf(dcElementOptions.idSave) < 0) {
                     var cdNewOptions = $.extend(true, {}, dcElementOptions);
                     cdNewOptions.idSave = $(this).parent().next().attr('id');
                     $(this).parent().kvDatepicker(eval($(this).attr('data-krajee-kvdatepicker')));
                     $(this).removeAttr('value name data-krajee-datecontrol');
                     $(this).datecontrol(cdNewOptions);
-
-                }
+                // }
             });
         }
     };
